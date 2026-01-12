@@ -1,0 +1,220 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-color: azure;
+}
+/* Header */
+.main-header {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* Main Content */
+.main-container {
+  background-color: azure;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-heading {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Card */
+.content {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.weather-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.weather-form label {
+  font-weight: bold;
+  color: #444;
+}
+
+.weather-form input,
+.weather-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Button */
+.submit-btn {
+  margin-top: 10px;
+  background: #11809c;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #19738a;
+}
+
+/* Footer */
+.main-footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Page title */
+.dis-heading{
+  text-align: center;
+  margin: 30px 0 20px;
+  font-size: 2.2rem;
+  color: #2c3e50;
+}
+
+/* Weather card */
+.details {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto 50px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Location heading */
+.details h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2193b0;
+  text-transform: capitalize;
+}
+
+/* Coordinates block */
+.Coordinates {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  background: #eef7fb;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.Coordinates li {
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+/* Weather condition */
+.weather {
+  margin-top: 20px;
+  padding: 18px;
+  background: #b2def4;
+  border-left: 5px solid #2193b0;
+  border-radius: 10px;
+}
+
+.weather h3 {
+  margin-bottom: 10px;
+  color: #19738a;
+  text-transform: capitalize;
+}
+
+.weather li {
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 6px;
+  color: #2c3e50;
+}
+
+/* Temperature details */
+.tempdet {
+  margin-top: 20px;
+  padding: 18px;
+ background: #e3cb9f;
+  border-left: 5px solid #f39c12;
+  border-radius: 10px;
+}
+
+.tempdet li {
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 6px;
+  color: #2c3e50;
+}
+
+/* Degree symbol */
+sup {
+  font-size: 0.7em;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .details {
+    margin: 20px;
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.back {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+/* Button styling */
+.back button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  border: none;
+  padding: 12px 26px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.back button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Click effect */
+.back button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
