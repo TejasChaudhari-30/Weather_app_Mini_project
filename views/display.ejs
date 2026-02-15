@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+<h1 class="dis-heading">
+    Weather Details
+</h1>
+
+<div class="details">
+     <h2>
+        location: <%=name%>
+     </h2>
+     <p class="Coordinates">
+        Coordinates : 
+          <% if(locals.coord) {%>
+        <li>latitude: <%=coord.lat%></li>
+        <li>longitude: <%=coord.lon%></li>
+<%}%>
+     </p>
+     <div class="weather">
+         <h3>weather condition</h3>
+             <% if(locals.weather) {%>
+                <%
+            const now = new Date();
+
+const hours = now.getHours();
+// console.log(hours);
+
+let weatherEmoji = "🌈";
+
+if (weather[0].main === "Clear")  {
+  if(hours<=18)  weatherEmoji = "☀️";
+else{ weatherEmoji="🌙"}}
+else if (weather[0].main === "Clouds") weatherEmoji = "☁️";
+else if (weather[0].main === "Rain") weatherEmoji = "🌧️";
+else if (weather[0].main === "Drizzle") weatherEmoji = "🌦️";
+else if (weather[0].main === "Thunderstorm") weatherEmoji = "⛈️";
+else if (weather[0].main === "Snow") weatherEmoji = "❄️";
+else if (weather[0].main === "Mist") weatherEmoji = "🌫️";
+else if (weather[0].main === "Haze") weatherEmoji = "🌫️";
+%>
+
+           <li>condition: <%=weather[0].main%><%=weatherEmoji%></li>
+           <li> Description: <%=weather[0].description%></li>
+           
+
+           <%}%>
+     </div>
+     <div class="tempdet">
+         <% if(locals.main) {%>
+        <li>Temp: <%=main.temp%><sup>o</sup>C</li>
+        <li>feels_like: <%=main.feels_like%><sup>o</sup>C</li>
+        <li>Min Temperature: <%=main.temp_min%><sup>o</sup>C</li>
+        <li>Max Temperature: <%=main.temp_max%><sup>o</sup>C</li>
+        <li>Humidity: <%=main.humidity%>%</li>
+
+
+
+        <%}%>
+     </div>
+   <div class="back">
+      <button onclick="history.back()" align="right">⮜ Go Back</button>
+</div>
+
+
+</div>
+<%- include('partials/footer') %>
+
+

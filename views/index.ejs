@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<main class="main-container">
+  <h2 class="page-heading"><%= heading %></h2>
+
+  <div class="content">
+    <form action="/getdetails" method="post" class="weather-form">
+      
+     <label for="city">Enter City / State / Country:</label>
+<input id="city" name="city" type="text" required>
+
+
+      <label for="unit">Units:</label>
+      <select name="units" id="unit">
+        <option value="metric">Metric (°C)</option>
+        <option value="standard">Standard (K)</option>
+      </select>
+
+      <input type="submit" value="Get Weather Details" class="submit-btn">
+    </form>
+  </div>
+</main>
+
+<%- include("partials/footer") %>
